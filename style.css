@@ -1,0 +1,43 @@
+body{
+    background-size: cover;
+}
+
+.contaner{
+    height: 210px;
+    display:flex;
+   
+    color: rgb(0, 0, 0);
+    justify-content: center;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 20px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 2s ease-in-out;
+    
+
+}
+#v1,#v2,#v3,#v4{
+    display: none;
+}
+.contaner.animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+img{
+    width: 30%;
+    
+    align-items: end;
+    background-size: cover;
+}
+video {
+    padding: 5px;
+    height: 200px;
+    width: 200px;
+}
+h1{
+    padding-top: 70px; 
+    padding-bottom: 70px;  
+}
+

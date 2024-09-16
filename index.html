@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Big Button Magic</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .big-button-container {
+        text-align: center;
+    }
+    
+    .big-button {
+        padding: 20px 40px;
+        font-size: 24px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        outline: none;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .big-button::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300%;
+        height: 300%;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+    
+    .big-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    }
+    
+    .big-button:hover::before {
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+    }
+    
+    .big-button span {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .magic-text {
+        font-size: 20px;
+        color: #333;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="big-button-container">
+    <a href="video.html" class="big-button"><span>Click Me for Magic</span></a>
+</div>
+
+</body>
+</html>
